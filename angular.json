@@ -2,5 +2,49 @@
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "version": 1,
   "newProjectRoot": "projects",
-  "projects": {}
+  "projects": {
+    "tesch-lib": {
+      "projectType": "library",
+      "root": "projects/tesch-lib",
+      "sourceRoot": "projects/tesch-lib/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "tsConfig": "projects/tesch-lib/tsconfig.lib.json",
+            "project": "projects/tesch-lib/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/tesch-lib/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/tesch-lib/src/test.ts",
+            "tsConfig": "projects/tesch-lib/tsconfig.spec.json",
+            "karmaConfig": "projects/tesch-lib/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/tesch-lib/tsconfig.lib.json",
+              "projects/tesch-lib/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    }},
+  "cli": {
+    "analytics": "8b3c95c0-583d-443f-b993-1cc09ad75140"
+  },
+  "defaultProject": "tesch-lib"
 }
