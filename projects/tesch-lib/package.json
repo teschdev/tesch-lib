@@ -1,11 +1,23 @@
 {
-  "name": "tesch-lib",
-  "version": "0.0.1",
+  "name": "@tesch/tesch-lib",
+  "version": "1.0.0",
+  "description": "personal lib",
+  "author": "Diego Tesch Gramelich",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/teschdev/tesch-lib.git"
+  },
+  "license": "MIT",
   "peerDependencies": {
     "@angular/common": "^10.2.4",
     "@angular/core": "^10.2.4"
   },
-  "dependencies": {
-    "tslib": "^2.0.0"
+  "keywords": [
+    "angular",
+    "javascript",
+    "tesch"
+  ],
+  "publishConfig": {
+    "access": "public"
   }
 }
