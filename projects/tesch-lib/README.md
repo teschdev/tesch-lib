@@ -1,24 +1,24 @@
 # TeschLib
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.2.4.
+## TeschButtonModule
 
-## Code scaffolding
+Importe o Modulo
 
-Run `ng generate component component-name --project tesch-lib` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project tesch-lib`.
-> Note: Don't forget to add `--project tesch-lib` or else it will be added to the default project in your `angular.json` file. 
+> import { TeschButtonModule } from '@tesch/tesch-lib/button/button.module'
 
-## Build
+Exemplo de uso:
 
-Run `ng build tesch-lib` to build the project. The build artifacts will be stored in the `dist/` directory.
+```
+<thc-button 
+  label="Texto do Botão"
+  (clicou)="handleClick($event)"
+></thc-button>
+```
 
-## Publishing
+| Propriedades  | Valor Padrão  | Tipo  |
+| ------------- |:-------------:| -----:|
+| label         | botão         | string|
 
-After building your library with `ng build tesch-lib`, go to the dist folder `cd dist/tesch-lib` and run `npm publish`.
-
-## Running unit tests
-
-Run `ng test tesch-lib` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+| Eventos       | Valor de Retorno    |
+| ------------- |:-------------------:|
+| clicou         | MouseEvent          |
