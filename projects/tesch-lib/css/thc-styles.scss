@@ -1,0 +1,37 @@
+$vermelho: #f94144;
+$orange-dark: #f3722c;
+$orange-light: #f8961e;
+$orange: #f9844a;
+$amarelo: #f9c74f;
+$verde: #43aa8b;
+$verde-dark: #4d908e;
+$azul-dark: #577590;
+$azul: #277da1;
+$branco: #F7F4F4;
+$sucesso: #22bb33;
+$sucesso-opacity: #22bb3399;
+$alert: #bb2124;
+$alert-opacity: #bb212499;
+$warning: #f0ad4e;
+$warning-opacity: #f0ad4e99;
+$info: #5bc0de;
+$info-opacity: #5bc0de99;
+$outilne: #57759099;
+
+@font-face {
+  font-family: "Open Sans";
+  src: url("../fonts/Open_Sans/OpenSans-Regular.ttf"),
+       url("../fonts/Open_Sans/OpenSans-Bold.ttf"),
+       url("../fonts/Open_Sans/OpenSans-BoldItalic.ttf"),
+       url("../fonts/Open_Sans/OpenSans-ExtraBold.ttf"),
+       url("../fonts/Open_Sans/OpenSans-ExtraBoldItalic.ttf"),
+       url("../fonts/Open_Sans/OpenSans-Italic.ttf"),
+       url("../fonts/Open_Sans/OpenSans-Light.ttf"),
+       url("../fonts/Open_Sans/OpenSans-LightItalic.ttf"),
+       url("../fonts/Open_Sans/OpenSans-SemiBold.ttf"),
+       url("../fonts/Open_Sans/OpenSans-SemiBoldItalic.ttf"),
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}

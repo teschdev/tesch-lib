@@ -7,7 +7,10 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "build:lib": "ng build tesch-lib --prod && npm run build:libstyles && npm run copy-fonts",
+    "build:libstyles": "cpx \"./projects/tesch-lib/css/**/*\" \"./dist/tesch-lib/css\" && scss-bundle -e ./projects/tesch-lib/css/thc-styles.scss -o ./dist/tesch-lib/css/thc-styles.scss",
+    "copy-fonts": "cpx \"./projects/tesch-lib/fonts/**/*\" \"./dist/tesch-lib/fonts\""
   },
   "dependencies": {
     "@angular/animations": "~10.2.4",
@@ -18,7 +21,10 @@
     "@angular/platform-browser": "~10.2.4",
     "@angular/platform-browser-dynamic": "~10.2.4",
     "@angular/router": "~10.2.4",
+    "@fortawesome/fontawesome-free": "^5.15.4",
+    "@fortawesome/fontawesome-free-webfonts": "^1.0.9",
     "rxjs": "~6.6.0",
+    "scss-bundle": "^3.1.2",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.2"
   },
@@ -26,10 +32,11 @@
     "@angular-devkit/build-angular": "~0.1002.3",
     "@angular/cli": "~10.2.3",
     "@angular/compiler-cli": "~10.2.4",
-    "@types/node": "^12.11.1",
     "@types/jasmine": "~3.5.0",
     "@types/jasminewd2": "~2.0.3",
+    "@types/node": "^12.11.1",
     "codelyzer": "^6.0.0",
+    "cpx": "^1.5.0",
     "jasmine-core": "~3.6.0",
     "jasmine-spec-reporter": "~5.0.0",
     "karma": "~5.0.0",

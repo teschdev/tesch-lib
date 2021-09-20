@@ -1,7 +1,13 @@
 {
   "$schema": "../../node_modules/ng-packagr/ng-package.schema.json",
   "dest": "../../dist/tesch-lib",
+  "assets": ["css/thc-styles.css"],
   "lib": {
-    "entryFile": "src/public-api.ts"
+    "entryFile": "src/public-api.ts",
+    "cssUrl": "inline",
+    "styleIncludePaths": [
+      "./css/thc-styles.scss",
+      "../../node_modules/@fortawesome/fontawesome-free/css/all.css"
+    ]
   }
 }

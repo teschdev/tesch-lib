@@ -7,7 +7,7 @@
       "projectType": "library",
       "root": "projects/tesch-lib",
       "sourceRoot": "projects/tesch-lib/src",
-      "prefix": "lib",
+      "prefix": "thc",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:ng-packagr",
@@ -68,9 +68,13 @@
               "projects/teste-library/src/assets"
             ],
             "styles": [
-              "projects/teste-library/src/styles.scss"
+              "node_modules/@fortawesome/fontawesome-free/css/all.min.css",
+              "projects/teste-library/src/styles.scss",
+              "dist/tesch-lib/css/thc-styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/@fortawesome/fontawesome-free/js/all.js"
+            ]
           },
           "configurations": {
             "production": {

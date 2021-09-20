@@ -1,0 +1,70 @@
+@import '../../../css/thc-styles.scss';
+
+.thc-button {
+  text-align: center;
+  display: inline-block;
+  width: 100%;
+  max-width: 360px;
+  box-sizing: border-box;
+  padding: 1rem 2rem;
+  color: $azul;
+  border: 1px solid $azul;
+  border-radius: 4px;
+
+  &:not(.disabled):hover {
+    font-weight: bold;
+    background-color: $outilne;
+    color: $branco !important;
+    cursor: pointer;
+  }
+
+  &.thc-success {
+    background-color: $sucesso;
+    border: none !important;
+    color: $branco !important;
+
+    &:not(.disabled):hover {
+      background-color: $sucesso-opacity;
+    }
+  }
+
+  &.thc-warning {
+    background-color: $warning;
+    border: none !important;
+    color: $branco !important;
+
+    &:not(.disabled):hover {
+      background-color: $warning-opacity;
+    }
+  }
+
+  &.thc-alert {
+    background-color: $alert;
+    border: none !important;
+    color: $branco !important;
+
+    &:not(.disabled):hover {
+      background-color: $alert-opacity;
+    }
+  }
+
+  &.thc-info {
+    background-color: $info;
+    border: none !important;
+    color: $branco !important;
+
+    &:not(.disabled):hover {
+      background-color: $info-opacity;
+    }
+  }
+
+  &.disabled {
+    opacity: 0.5;
+  }
+
+  &.thc-button-icon {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}

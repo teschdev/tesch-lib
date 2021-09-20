@@ -1,5 +1,8 @@
-<div class="teste">
-  <a class="thc-button" (click)="clicou.emit($event)">
-    {{ label }}
-  </a>
+<div
+  class="thc-button {{ class }}"
+  [ngClass]="{ 'thc-button-icon': icon }"
+  (click)="clicou.emit($event)"
+>
+  <span>{{ label }}</span>
+  <em class="icon" style="font-size: 1.5rem;" [attr.class]="icon"></em>
 </div>
