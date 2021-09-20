@@ -17,21 +17,12 @@ $warning-opacity: #f0ad4e99;
 $info: #5bc0de;
 $info-opacity: #5bc0de99;
 $outilne: #57759099;
-
-@font-face {
-  font-family: "Open Sans";
-  src: url("../fonts/Open_Sans/OpenSans-Regular.ttf"),
-       url("../fonts/Open_Sans/OpenSans-Bold.ttf"),
-       url("../fonts/Open_Sans/OpenSans-BoldItalic.ttf"),
-       url("../fonts/Open_Sans/OpenSans-ExtraBold.ttf"),
-       url("../fonts/Open_Sans/OpenSans-ExtraBoldItalic.ttf"),
-       url("../fonts/Open_Sans/OpenSans-Italic.ttf"),
-       url("../fonts/Open_Sans/OpenSans-Light.ttf"),
-       url("../fonts/Open_Sans/OpenSans-LightItalic.ttf"),
-       url("../fonts/Open_Sans/OpenSans-SemiBold.ttf"),
-       url("../fonts/Open_Sans/OpenSans-SemiBoldItalic.ttf"),
-}
+$bordaredonda: 5px;
 
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Open Sans' sans-serif;
+}
+
+.thc-hidden {
+  display: none;
 }

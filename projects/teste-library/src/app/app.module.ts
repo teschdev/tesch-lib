@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { TeschButtonModule } from './../../../tesch-lib/src/lib/button/button.module';
+import { TeschAlertModule, TeschButtonModule, ThcAlertService } from '@tesch/tesch-lib';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
@@ -12,9 +12,12 @@ import { AppComponent } from './app.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    TeschButtonModule
+    TeschButtonModule,
+    TeschAlertModule
   ],
-  providers: [],
+  providers: [
+    ThcAlertService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

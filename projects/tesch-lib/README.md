@@ -21,8 +21,41 @@ build: {
 
 * .thc-success  ![#22bb33](https://via.placeholder.com/15/22bb33/000000?text=+) `#22bb33`
 * .thc-warning ![#f0ad4e](https://via.placeholder.com/15/f0ad4e/000000?text=+) `#f0ad4e`
-* .thc-alert ![#bb2124](https://via.placeholder.com/15/bb2124/000000?text=+) `#bb2124`
+* .thc-error ![#bb2124](https://via.placeholder.com/15/bb2124/000000?text=+) `#bb2124`
 * .thc-info ![#5bc0de](https://via.placeholder.com/15/5bc0de/000000?text=+) `#5bc0de`
+
+## TeschAlertModule
+
+Importe o Modulo
+
+```import { TeschAlertModule } from '@tesch/tesch-lib/alert/alert.module'```
+
+Exemplo de uso: 
+
+>app.component.ts
+
+```
+  import { ThcAlertService } from '@tesch/tesch-lib/alert/alert.service'
+
+  export class AppComponent {
+    constructor(private alertService: AlertService) {}
+
+    showAlert() {
+      this.alertService.sucesso('texto da mensagem', { autoClose: false });
+    }
+  }
+```
+
+>app.component.html
+
+```
+<div>
+  <thc-alert></thc-alert>
+</div>
+
+<thc-button class="thc-success" label="Exibir alert" (clicou)="showAlert()"></thc-button>
+```
+
 
 ## TeschButtonModule
 
@@ -56,3 +89,4 @@ Exemplo de uso:
 | Classe      |
 | ------------- |
 | thc-button    |
+| thc-button-container    |

@@ -1,7 +1,23 @@
 <div>
   <thc-button class="thc-success" icon="fab fa-angular" label="Tesch Lib Success Button"></thc-button>
-  <thc-button class="thc-alert" label="Tesch Lib Alert Button"></thc-button>
-  <thc-button class="thc-info" label="Tesch Lib Info Button"></thc-button>
+  <thc-button class="thc-error" label="Tesch Lib Error Button"></thc-button>
+  <thc-button class="thc-info" label="Tesch Lib Info Button" icon="fab fa-angular"></thc-button>
   <thc-button class="thc-warning" label="Tesch Lib Warning Button"></thc-button>
   <thc-button label="Tesch Lib Default Button"></thc-button>
+</div>
+
+<div>
+  <div class="alert-section">
+    <thc-alert></thc-alert>
+  </div>
+
+  <thc-button class="thc-success" icon="fab fa-angular" label="Exibir alert Success" (clicou)="alertSucess()"></thc-button>
+
+  <thc-button class="thc-info" icon="fab fa-angular" label="Exibir alert Info" (clicou)="alertInfo()"></thc-button>
+
+  <thc-button class="thc-warning" icon="fab fa-angular" label="Exibir alert Warning" (clicou)="alertWarning()"></thc-button>
+
+  <thc-button class="thc-error" icon="fab fa-angular" label="Exibir alert Error" (clicou)="alertError()"></thc-button>
+
+  <thc-button class="thc-info" icon="fab fa-angular" label="Exibir alert Autoclose" (clicou)="alertAutoClose()"></thc-button>
 </div>

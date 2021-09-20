@@ -8,7 +8,8 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "build:lib": "ng build tesch-lib --prod && npm run build:libstyles && npm run copy-fonts",
+    "build:lib": "ng build tesch-lib --prod && npm run build:libstyles",
+    "publicar-lib": "npm run build:lib && cd dist/tesch-lib/ && npm publish",
     "build:libstyles": "cpx \"./projects/tesch-lib/css/**/*\" \"./dist/tesch-lib/css\" && scss-bundle -e ./projects/tesch-lib/css/thc-styles.scss -o ./dist/tesch-lib/css/thc-styles.scss",
     "copy-fonts": "cpx \"./projects/tesch-lib/fonts/**/*\" \"./dist/tesch-lib/fonts\""
   },
@@ -23,6 +24,7 @@
     "@angular/router": "~10.2.4",
     "@fortawesome/fontawesome-free": "^5.15.4",
     "@fortawesome/fontawesome-free-webfonts": "^1.0.9",
+    "@tesch/tesch-lib": "^1.0.7-beta",
     "rxjs": "~6.6.0",
     "scss-bundle": "^3.1.2",
     "tslib": "^2.0.0",

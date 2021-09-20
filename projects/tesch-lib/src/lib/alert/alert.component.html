@@ -1,0 +1,12 @@
+<div class="alert-container">
+  <div *ngFor="let alert of alerts" [attr.class]="cssClass(alert)" >
+    <span>{{alert.mensagem}}</span>
+    <span class="thc-alert-icon" (click)="removeAlert(alert)">
+      <em class="fas fa-times"></em>
+    </span>
+  </div>
+</div>
+
+<pre>
+  {{ alerts | json }}
+</pre>

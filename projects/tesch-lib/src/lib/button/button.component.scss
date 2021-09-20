@@ -38,7 +38,7 @@
     }
   }
 
-  &.thc-alert {
+  &.thc-error {
     background-color: $alert;
     border: none !important;
     color: $branco !important;
@@ -62,7 +62,7 @@
     opacity: 0.5;
   }
 
-  &.thc-button-icon {
+  .thc-button-container {
     display: flex;
     align-items: center;
     justify-content: space-between;

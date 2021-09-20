@@ -68,9 +68,9 @@
               "projects/teste-library/src/assets"
             ],
             "styles": [
+              "node_modules/@tesch/tesch-lib/css/thc-styles.scss",
               "node_modules/@fortawesome/fontawesome-free/css/all.min.css",
-              "projects/teste-library/src/styles.scss",
-              "dist/tesch-lib/css/thc-styles.scss"
+              "projects/teste-library/src/styles.scss"
             ],
             "scripts": [
               "node_modules/@fortawesome/fontawesome-free/js/all.js"
