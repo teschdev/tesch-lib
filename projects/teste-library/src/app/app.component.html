@@ -1,10 +1,17 @@
 <div>
+  <thc-nav-bar [itemsMenu]="menuNav"></thc-nav-bar>
+</div>
+
+<hr>
+
+<div>
   <thc-button class="thc-success" icon="fab fa-angular" label="Tesch Lib Success Button"></thc-button>
   <thc-button class="thc-error" label="Tesch Lib Error Button"></thc-button>
   <thc-button class="thc-info" label="Tesch Lib Info Button" icon="fab fa-angular"></thc-button>
   <thc-button class="thc-warning" label="Tesch Lib Warning Button"></thc-button>
   <thc-button label="Tesch Lib Default Button"></thc-button>
 </div>
+<hr>
 
 <div>
   <div class="alert-section">
@@ -21,3 +28,17 @@
 
   <thc-button class="thc-info" icon="fab fa-angular" label="Exibir alert Autoclose" (clicou)="alertAutoClose()"></thc-button>
 </div>
+<hr>
+
+<div style="display: flex;">
+  <div style="display: flex;">
+    <span>Ator 1</span>
+    <thc-action-menu [actor]="fakeActor1" [actions]="context_menu" ></thc-action-menu>
+  </div>
+
+  <div style="display: flex;">
+    <span>Ator 2</span>
+    <thc-action-menu [actor]="fakeActor2" [actions]="context_menu" ></thc-action-menu>
+  </div>
+</div>
+<hr>

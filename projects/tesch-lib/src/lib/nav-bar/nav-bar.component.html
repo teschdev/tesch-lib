@@ -1,0 +1,25 @@
+<nav class="thc-navbar thc-container">
+  <ul>
+    <li *ngFor="let item of itemsMenu">
+      <thc-menu-item
+        [label]="item.label"
+        (itemSelecionado)="openMenu($event)"
+        [icon]="item.icon"
+        [options]="item.options"
+        [itemId]="item.id"
+      ></thc-menu-item>
+    </li>
+  </ul>
+</nav>
+<div class="thc-navbar-options thc-container" [@toggleAuxMenu]="toggleMenu" >
+  <div [@hideShow]="state" class="thc-navbar-options-group" *ngFor="let grupo of optionsMenuSelecionado">
+    <fieldset>{{ grupo[0]?.group }}</fieldset>
+    <a
+      class="thc-navbar-options-link"
+      *ngFor="let option of grupo"
+      [routerLink]="[option?.routeRedirect]" routerLinkActive="thc-active"
+    >
+      {{ option.name }}
+    </a>
+  </div>
+</div>

@@ -1,0 +1,42 @@
+@import '../../../css/thc-styles.scss';
+
+.action-button {
+  border-radius: $bordaredonda;
+  background-color: $info;
+  padding: .3rem;
+  color: $branco;
+}
+
+.menu-wrap {
+  border: 1px solid #c8c8c8;
+  position: absolute;
+  z-index: 9;
+  max-width: 25%;
+  min-width: 200px;
+  border-radius: 1px;
+  -webkit-box-shadow: -3px 2px 15px -1px rgb(0 0 0 / 25%);
+  -moz-box-shadow: -3px 2px 15px -1px rgba(0, 0, 0, 0.25);
+  box-shadow: -1px 1px 3px 1px rgb(0 0 0 / 33%);
+  background: #fff;
+
+  .context-menu {
+    margin: 0px;
+    text-align: left;
+
+    .menu-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: .5rem;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #eaeaea;
+      }
+
+      .thc-action-icon {
+        margin-left: 10px;
+      }
+    }
+  }
+}

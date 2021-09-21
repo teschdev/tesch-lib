@@ -1,14 +1,295 @@
-import { Component } from '@angular/core';
-import { ThcAlertService } from '@tesch/tesch-lib';
+import { Component, Injector, OnInit } from '@angular/core';
+import { ContextMenuAction, ContextMenuService, GenericAction, ThcAlertService } from '@tesch/tesch-lib';
+import { ThcMenuItem } from 'projects/tesch-lib/src/public-api';
+import { v4 as uuid } from 'uuid';
+
+interface FakeActor {
+  id: string;
+  age: number;
+}
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
-  title = 'teste-library';
+export class AppComponent implements OnInit {
+  fakeActor1: FakeActor = {
+    id: uuid(),
+    age: 21
+  }
 
-  constructor(private alertService: ThcAlertService) {}
+  fakeActor2: FakeActor = {
+    id: uuid(),
+    age: 16
+  }
+
+  context_menu: ContextMenuAction<any>[] = [];
+
+  menuNav: ThcMenuItem[] = [
+    {
+      label: 'Item 1',
+      id: uuid(),
+      options:  [
+        {
+          id: uuid(),
+          name: 'option 1',
+          group: 'group 1',
+        },
+        {
+          id: uuid(),
+          name: 'option 2',
+          group: 'group 1',
+        },
+        {
+          id: uuid(),
+          name: 'option 3',
+          group: 'group 1',
+        },
+        {
+          id: uuid(),
+          name: 'option 4',
+          group: 'group 1',
+        },
+        {
+          id: uuid(),
+          name: 'option 5',
+          group: 'group 2',
+        },
+        {
+          id: uuid(),
+          name: 'option 6',
+          group: 'group 2',
+        },
+      ]
+    },
+    {
+      label: 'Item 2',
+      id: uuid(),
+      options:  [
+        {
+          id: uuid(),
+          name: 'option 1',
+          group: 'group 1',
+        },
+        {
+          id: uuid(),
+          name: 'option 2',
+          group: 'group 1',
+        },
+        {
+          id: uuid(),
+          name: 'option 5',
+          group: 'group 2',
+        },
+        {
+          id: uuid(),
+          name: 'option 6',
+          group: 'group 2',
+        },
+      ]
+    },
+    {
+      label: 'Item 3',
+      id: uuid(),
+      options:  [
+        {
+          id: uuid(),
+          name: 'option 3',
+          group: 'group 1',
+          routeRedirect: 'http://google.com.br'
+        },
+        {
+          id: uuid(),
+          name: 'option 4',
+          group: 'group 1',
+        },
+        {
+          id: uuid(),
+          name: 'option 5',
+          group: 'group 2',
+        },
+        {
+          id: uuid(),
+          name: 'option 6',
+          group: 'group 2',
+        },
+      ]
+    },
+    {
+      icon: 'fas fa-bomb',
+      label: 'Item 5',
+      id: uuid(),
+      options:  [
+        {
+          id: uuid(),
+          name: 'option 1',
+          group: 'group 1',
+        },
+        {
+          id: uuid(),
+          name: 'option 2',
+          group: 'group 1',
+        },
+        {
+          id: uuid(),
+          name: 'option 6',
+          group: 'group 2',
+        },
+        {
+          id: uuid(),
+          name: 'option 7',
+          group: 'group 3',
+        },
+        {
+          id: uuid(),
+          name: 'option 8',
+          group: 'group 3',
+        },
+        {
+          id: uuid(),
+          name: 'option 9',
+          group: 'group 3',
+        },
+        {
+          id: uuid(),
+          name: 'option 10',
+          group: 'group 3',
+        },
+        {
+          id: uuid(),
+          name: 'option 11',
+          group: 'group 3',
+        },
+        {
+          id: uuid(),
+          name: 'option 12',
+          group: 'group 3',
+        },
+        {
+          id: uuid(),
+          name: 'option 12',
+          group: 'group 3',
+        },
+        {
+          id: uuid(),
+          name: 'option 12',
+          group: 'group 3',
+        },
+        {
+          id: uuid(),
+          name: 'option 12',
+          group: 'group 3',
+        },
+        {
+          id: uuid(),
+          name: 'option 12',
+          group: 'group 3',
+        },
+        {
+          id: uuid(),
+          name: 'option 13',
+          group: 'group 4',
+        },
+        {
+          id: uuid(),
+          name: 'option 14',
+          group: 'group 4',
+        },
+        {
+          id: uuid(),
+          name: 'option 15',
+          group: 'group 4',
+        },
+        {
+          id: uuid(),
+          name: 'option 16',
+          group: 'group 5',
+        },
+        {
+          id: uuid(),
+          name: 'option 17',
+          group: 'group 5',
+        },
+        {
+          id: uuid(),
+          name: 'option 18',
+          group: 'group 5',
+        },
+        {
+          id: uuid(),
+          name: 'option 19',
+          group: 'group 6',
+        },
+        {
+          id: uuid(),
+          name: 'option 19',
+          group: 'group 6',
+        },
+        {
+          id: uuid(),
+          name: 'option 19',
+          group: 'group 6',
+        },
+        {
+          id: uuid(),
+          name: 'option 19',
+          group: 'group 7',
+        },
+        {
+          id: uuid(),
+          name: 'option 19',
+          group: 'group 7',
+        },
+        {
+          id: uuid(),
+          name: 'option 19',
+          group: 'group 7',
+        },
+        {
+          id: uuid(),
+          name: 'option 19',
+          group: 'group 8',
+        },
+        {
+          id: uuid(),
+          name: 'option 19',
+          group: 'group 8',
+        },
+        {
+          id: uuid(),
+          name: 'option 19',
+          group: 'group 8',
+        },
+      ]
+    }
+  ];
+
+  constructor(private alertService: ThcAlertService, private menuService: ContextMenuService, private injector: Injector) {}
+
+  ngOnInit(): void {
+    this.context_menu = [
+      this.menuService.createContextMenuItem(
+        {
+          action: this.injector.get(GenericAction),
+          visible: true,
+          callbackFn: (data) => console.log(data)
+        },
+        ['parametro_1', uuid()],
+        ['parametro_2', uuid()],
+        ['parametro_3', uuid()],
+      ),
+      this.menuService.createContextMenuItem(
+        {
+          action: this.injector.get(GenericAction),
+          isVisible: (data) => data.age > 18,
+          callbackFn: (data) => console.log(data)
+        },
+        ['parametro_4', uuid()],
+        ['parametro_5', uuid()],
+        ['parametro_6', uuid()],
+      ),
+    ]
+  }
 
   alertSucess() {
     this.alertService.sucesso('Mensagem de Teste - Sucesso', { autoClose: false });

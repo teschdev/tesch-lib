@@ -1,3 +1,4 @@
+import { animate, state, style, transition, trigger } from '@angular/animations';
 import { Component, Input, OnDestroy, OnInit, ViewEncapsulation } from '@angular/core';
 import { NavigationStart, Router } from '@angular/router';
 import { Subscription } from 'rxjs';
@@ -9,7 +10,18 @@ import { ThcAlert } from './model/alert.model';
   selector: 'thc-alert',
   templateUrl: './alert.component.html',
   styleUrls: ['./alert.component.scss'],
-  encapsulation: ViewEncapsulation.None
+  encapsulation: ViewEncapsulation.None,
+  animations: [
+    trigger('preencher', [
+        state('closed', style({
+            width: 0,
+        })),
+        state('open', style({
+            width: '100%'
+        })),
+        transition('* => *', animate(150))
+    ]),
+]
 })
 export class AlertComponent implements OnInit, OnDestroy {
   @Input() id: 'padrao';
@@ -51,15 +63,10 @@ export class AlertComponent implements OnInit, OnDestroy {
   removeAlert(alert: ThcAlert) {
     if (!this.alerts.includes(alert)) return;
 
-    if (this.fade) {
-      this.alerts.find(x => x === alert).fade = true;
+    setTimeout(() => {
+      this.alerts = this.alerts.filter(x => x !== alert);
+    }, 500);
 
-      setTimeout(() => {
-        this.alerts = this.alerts.filter(x => x !== alert);
-      }, 250);
-      return;
-    }
-    this.alerts = this.alerts.filter(x => x !== alert);
   }
 
   cssClass(alert: ThcAlert) {

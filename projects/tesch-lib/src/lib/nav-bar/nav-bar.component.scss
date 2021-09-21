@@ -1,0 +1,71 @@
+@import '../../../css/thc-styles.scss';
+
+.thc-navbar {
+  font-family: $opensans;
+  background-color: $cinza-escuro;
+  text-align: center;
+
+  ul {
+    display: flex;
+    align-items: center;
+
+
+    li {
+      font-size: 1.1rem;
+
+      display: inline-block;
+    }
+  }
+}
+
+.thc-navbar-options {
+  display: flex;
+  position: absolute;
+  flex-wrap: wrap;
+  margin-top: -16px;
+  z-index: 9271;
+  background-color: $preto;
+  left: 50%;
+  transform: translate(-50%);
+
+  .thc-navbar-options-group {
+    margin: 1rem;
+    height: max-content;
+    width: 18%;
+
+    &:hover fieldset {
+      border-left: 0;
+      background-color: $branco;
+      color: $bg-chamada-mobile;
+      transition: all 0.3s;
+    }
+
+    fieldset {
+      font-weight: bold;
+      margin: 0;
+      text-align: center;
+      text-transform: uppercase;
+      border: 0;
+      border-left: 10px solid #cddc39;
+      color: $branco;
+      font-size: 1.2rem;
+      cursor: default;
+    }
+
+    .thc-navbar-options-link {
+      font-size: 1.1rem;
+      display: block;
+      color: $branco;
+      text-transform: capitalize;
+      padding: 0.5rem 2rem .5rem 2rem;
+
+      &:hover {
+        color: $bg-chamada-mobile;
+        background-color: $cinza-medio;
+        border-bottom: 1px solid $branco;
+        cursor: pointer;
+        transition: all 0.3s;
+      }
+    }
+  }
+}

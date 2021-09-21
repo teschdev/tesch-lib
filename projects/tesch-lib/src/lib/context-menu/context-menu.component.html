@@ -1,0 +1,19 @@
+<div>
+  <a
+    #contextMenu
+    class="action-button"
+  >
+    <em class="fas fa-chevron-down"></em>
+  </a>
+
+  <div id="menu{{ actor?.id }}" *ngIf="show" class="menu-wrap">
+    <div class="context-menu" *ngFor="let action of actions">
+      <span (click)="action.command(actor)" class="menu-item" *ngIf="action.isVisible(actor)">
+        <span>{{ action.label }}</span>
+        <span class="thc-action-icon">
+          <em [attr.class]="action.icon"></em>
+        </span>
+      </span>
+    </div>
+  </div>
+</div>

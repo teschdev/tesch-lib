@@ -1,0 +1,21 @@
+@import '../../../../css/thc-styles.scss';
+
+.thc-menu-item-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 100px;
+  color: $branco;
+  padding-right: 0.7rem;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+  padding-left: 0.7rem;
+
+  &:not(.active):hover {
+    background-color: $bg-chamada-mobile;
+    opacity: .7;
+    color: $azul-dark;
+    transition: all 0.125s;
+    cursor: pointer;
+  }
+}

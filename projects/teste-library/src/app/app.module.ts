@@ -1,8 +1,11 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { TeschAlertModule, TeschButtonModule, ThcAlertService } from '@tesch/tesch-lib';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { TeschAlertModule, TeschButtonModule, TeschContextMenuModule, ThcAlertService } from '@tesch/tesch-lib';
+import { TeschNavBarModule } from 'projects/tesch-lib/src/public-api';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+
 
 
 @NgModule({
@@ -11,9 +14,12 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     TeschButtonModule,
-    TeschAlertModule
+    TeschAlertModule,
+    TeschContextMenuModule,
+    TeschNavBarModule
   ],
   providers: [
     ThcAlertService
