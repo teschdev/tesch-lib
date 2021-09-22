@@ -1,13 +1,13 @@
 @import '../../../css/thc-styles.scss';
 
-.action-button {
+.thc-action-button {
   border-radius: $bordaredonda;
   background-color: $info;
   padding: .3rem;
   color: $branco;
 }
 
-.menu-wrap {
+.thc-menu-wrap {
   border: 1px solid #c8c8c8;
   position: absolute;
   z-index: 9;
@@ -19,11 +19,11 @@
   box-shadow: -1px 1px 3px 1px rgb(0 0 0 / 33%);
   background: #fff;
 
-  .context-menu {
+  .thc-context-menu {
     margin: 0px;
     text-align: left;
 
-    .menu-item {
+    .thc-context-menu-item {
       display: flex;
       align-items: center;
       justify-content: space-between;
