@@ -24,7 +24,7 @@
     "@angular/router": "~10.2.4",
     "@fortawesome/fontawesome-free": "^5.15.4",
     "@fortawesome/fontawesome-free-webfonts": "^1.0.9",
-    "@tesch/tesch-lib": "^1.0.9-beta-6",
+    "@tesch/tesch-lib": "^1.0.10-beta-1",
     "rxjs": "~6.6.0",
     "scss-bundle": "^3.1.2",
     "tslib": "^2.0.0",

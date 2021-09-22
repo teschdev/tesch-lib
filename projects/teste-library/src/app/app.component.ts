@@ -1,6 +1,5 @@
 import { Component, Injector, OnInit } from '@angular/core';
-import { ContextMenuAction, ContextMenuService, GenericAction, ThcAlertService } from '@tesch/tesch-lib';
-import { ThcMenuItem } from 'projects/tesch-lib/src/public-api';
+import { ContextMenuAction, ContextMenuService, GenericAction, ThcAlertService, ThcMenuItem } from '@tesch/tesch-lib';
 import { v4 as uuid } from 'uuid';
 
 interface FakeActor {
