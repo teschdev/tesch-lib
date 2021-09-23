@@ -1,0 +1,8 @@
+<cdk-virtual-scroll-viewport class="thc-infinity-scrooler" style="height: 300px;" [itemSize]="itemListSize" (scrolledIndexChange)="loadScrool($event)">
+  <ng-container *cdkVirtualFor="let item of arrayDataFull">
+    <div class="thc-infinity-scrooler-container" [style.heigth]="itemListSize">
+      <ng-container *ngTemplateOutlet="templateRef; context: { $implicit: item }"></ng-container>
+    </div>
+  </ng-container>
+</cdk-virtual-scroll-viewport>
+

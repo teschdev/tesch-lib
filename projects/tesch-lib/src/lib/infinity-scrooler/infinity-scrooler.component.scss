@@ -1,0 +1,24 @@
+.thc-infinity-scrooler {
+  box-shadow: inset -4px -4px 7px -3px rgb(50 50 50 / 73%), inset 4px 4px 7px -3px rgb(50 50 50 / 73%);
+}
+
+::-webkit-scrollbar{
+  width: 4px;
+  height: 4px;
+  }
+  ::-webkit-scrollbar-thumb{
+  background: linear-gradient(57deg, #507852 17%,#0E8A0E 77%);
+  border-radius: 0px;
+  }
+  ::-webkit-scrollbar-thumb:hover{
+  background: #DE2F2F;
+  }
+  ::-webkit-scrollbar-track{
+  background: #F0F0F0;
+  border-radius: 0px;
+  box-shadow: inset -6px 0px 3px 0px #EBEBEB;
+  }
+
+.thc-infinity-scrooler-container {
+  margin: .5rem;
+}

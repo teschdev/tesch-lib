@@ -5,7 +5,7 @@
 <hr>
 
 <div>
-  <thc-button class="thc-success" icon="fab fa-angular" label="Tesch Lib Success Button"></thc-button>
+  <thc-button class="thc-success" icon="fab fa-times" label="Botão do Fanfarrão"></thc-button>
   <thc-button class="thc-error" label="Tesch Lib Error Button"></thc-button>
   <thc-button class="thc-info" label="Tesch Lib Info Button" icon="fab fa-angular"></thc-button>
   <thc-button class="thc-warning" label="Tesch Lib Warning Button"></thc-button>
@@ -42,3 +42,26 @@
   </div>
 </div>
 <hr>
+
+<div>
+  <thc-infinity-scrooler
+    [value]="scroolData?.data"
+    (onLazyLoad)="startLoading($event)"
+    [page]="scroolData?.current_page"
+    [totalPages]="scroolData?.last_page"
+    [height]="500"
+    [itemListSize]="100"
+  >
+    <ng-template #templateRef let-data>
+      <div style="display: flex;">
+        <div style="width: 100px;">
+          <img [src]="data.miniatura_url" width="100px" height="100px" alt="">
+        </div>
+        <div style="display: flex; flex-direction: column;">
+          <strong>{{ data.titulo | uppercase }}</strong>
+          <span>{{ data.data | date:'dd/MM/yyyy' }}</span>
+        </div>
+      </div>
+    </ng-template>
+  </thc-infinity-scrooler>
+</div>

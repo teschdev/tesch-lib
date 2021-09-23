@@ -1,6 +1,7 @@
 import { Component, Injector, OnInit } from '@angular/core';
 import { ContextMenuAction, ContextMenuService, GenericAction, ThcAlertService, ThcMenuItem } from '@tesch/tesch-lib';
 import { v4 as uuid } from 'uuid';
+import { ServiceService } from './service.service';
 
 interface FakeActor {
   id: string;
@@ -21,6 +22,8 @@ export class AppComponent implements OnInit {
     id: uuid(),
     age: 16
   }
+
+  scroolData;
 
   context_menu: ContextMenuAction<any>[] = [];
 
@@ -263,7 +266,7 @@ export class AppComponent implements OnInit {
     }
   ];
 
-  constructor(private alertService: ThcAlertService, private menuService: ContextMenuService, private injector: Injector) {}
+  constructor(private alertService: ThcAlertService, private menuService: ContextMenuService, private injector: Injector, private service: ServiceService) {}
 
   ngOnInit(): void {
     this.context_menu = [
@@ -288,6 +291,12 @@ export class AppComponent implements OnInit {
         ['parametro_6', uuid()],
       ),
     ]
+  }
+
+  async startLoading({ page }) {
+    const api = 'http://179.127.31.54:8000/api/noticias/todas';
+    this.scroolData = await this.service.getRequest(api, { page }).toPromise();
+    console.log(this.scroolData);
   }
 
   alertSucess() {
