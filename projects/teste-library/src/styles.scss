@@ -17,3 +17,14 @@ body {
   font-family: 'Open_Sans' sans-serif;
 }
 
+.table-striped > tbody > tr {
+  &:nth-of-type(odd) {
+    background-color: #B2D2A4 !important;
+  }
+
+  &:hover {
+    background-color: #B2D2A433 !important;
+  }
+}
+
+

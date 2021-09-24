@@ -43,7 +43,7 @@
 </div>
 <hr>
 
-<div>
+<!-- <div>
   <thc-infinity-scrooler
     [value]="scroolData?.data"
     (onLazyLoad)="startLoading($event)"
@@ -64,4 +64,33 @@
       </div>
     </ng-template>
   </thc-infinity-scrooler>
+</div> -->
+
+
+<div>
+  <thc-table
+    [value]="scroolData?.data"
+    [paginate]="true"
+    [page]="scroolData?.current_page"
+    [rows]="5"
+    [totalRows]="scroolData?.data?.length"
+  >
+    <ng-template #header>
+      <tr>
+        <th>
+          Titulo
+        </th>
+        <th>
+          Data
+        </th>
+      </tr>
+    </ng-template>
+
+    <ng-template #body let-item>
+      <tr>
+        <td>{{ item.titulo }}</td>
+        <td>{{ item.data | date:'dd/MM/yyyy' }}</td>
+      </tr>
+    </ng-template>
+  </thc-table>
 </div>

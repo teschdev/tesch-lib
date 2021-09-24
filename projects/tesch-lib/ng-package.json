@@ -6,8 +6,15 @@
     "entryFile": "src/public-api.ts",
     "cssUrl": "inline",
     "styleIncludePaths": [
-      "./css/thc-styles.scss",
-      "../../node_modules/@fortawesome/fontawesome-free/css/all.css"
+      "../../node_modules/@fortawesome/fontawesome-free/css/all.css",
+      "../../node_modules/bootstrap/scss/bootstrap.scss",
+      "./css/thc-styles.scss"
     ]
-  }
+  },
+  "whitelistedNonPeerDependencies": [
+    "angular",
+    "fontawesome",
+    "uuid",
+    "bootstrap"
+  ]
 }

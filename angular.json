@@ -68,6 +68,7 @@
               "projects/teste-library/src/assets"
             ],
             "styles": [
+              "node_modules/bootstrap/scss/bootstrap.scss",
               "node_modules/@tesch/tesch-lib/css/thc-styles.scss",
               "node_modules/@fortawesome/fontawesome-free/css/all.min.css",
               "projects/teste-library/src/styles.scss"

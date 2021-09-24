@@ -1,5 +1,5 @@
 import { CdkVirtualScrollViewport } from '@angular/cdk/scrolling';
-import { AfterViewInit, Component, ContentChild, ElementRef, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges, TemplateRef, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ContentChild, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges, TemplateRef, ViewChild } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
 
 @Component({
@@ -9,8 +9,6 @@ import { BehaviorSubject, Observable } from 'rxjs';
 })
 export class InfinityScroolerComponent implements OnInit, OnChanges, AfterViewInit {
   @ViewChild(CdkVirtualScrollViewport) viewport: CdkVirtualScrollViewport;
-
-  @ViewChild('ItemList', { static: false }) ItemList: ElementRef;
 
   @ContentChild(TemplateRef, { static: false }) templateRef: TemplateRef<any>;
 

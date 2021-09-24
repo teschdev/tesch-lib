@@ -1,0 +1,48 @@
+@import '../../../css/thc-styles.scss';
+
+.thc-table {
+  border: 1px solid $thc-ganja-theme-older-color;
+
+  .thc-table-header {
+    font-weight: bold;
+    color: $thc-ganja-theme-older-color;
+    background-color: $thc-ganja-theme-primary-color;
+    border: 1px solid $thc-ganja-theme-primary-color;
+    text-align: center;
+  }
+
+  .thc-table-footer {
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      ul {
+        li {
+
+          select {
+            height: 100%;
+            border: 0;
+            outline: none;
+            background: transparent;
+            border-bottom: 1px solid $thc-ganja-theme-primary-color;
+            margin-left: 5px;
+          }
+
+          &.page-active {
+            a {
+              background-color: $thc-ganja-theme-primary-color;
+              color: $branco !important;
+            }
+          }
+
+          a {
+            color: $thc-ganja-theme-primary-color;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}
+

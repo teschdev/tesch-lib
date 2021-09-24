@@ -5,6 +5,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TeschAlertModule, TeschButtonModule, TeschContextMenuModule, TeschNavBarModule, ThcAlertService } from '@tesch/tesch-lib';
 import { TeschInfinityScroolerModule } from './../../../tesch-lib/src/lib/infinity-scrooler/infinity-scrooler.module';
+import { TeschTableModule } from './../../../tesch-lib/src/lib/table/table.module';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
@@ -22,7 +23,8 @@ import { AppComponent } from './app.component';
     TeschAlertModule,
     TeschContextMenuModule,
     TeschNavBarModule,
-    TeschInfinityScroolerModule
+    TeschInfinityScroolerModule,
+    TeschTableModule
   ],
   providers: [
     ThcAlertService

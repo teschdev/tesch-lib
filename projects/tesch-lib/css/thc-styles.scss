@@ -38,6 +38,15 @@ $planos-cartao-mega: #E33B3B;
 
 $opensans: 'Open Sans' sans-serif;
 
+$thc-ganja-theme-primary-color: #007500;
+$thc-ganja-theme-secondary-color: #00A300;
+$thc-ganja-theme-primary-ligth-color: #00D100;
+$thc-ganja-theme-light-color: #00FF00;
+$thc-ganja-theme-xlight-color: #2EFF2E;
+$thc-ganja-theme-dark-color: #1A4314;
+$thc-ganja-theme-older-color: #B2D2A4;
+
+
 
 body {
   font-family: $opensans;
@@ -48,6 +57,16 @@ body {
 }
 
 .thc-container {
-  width: 1680px;
-  margin: 0 auto;
+  width: 100%;
+  padding: 0 6% 0 6%;
+}
+
+.table-striped > tbody > tr {
+  &:nth-of-type(odd) {
+    background-color: #B2D2A4 !important;
+  }
+
+  &:hover {
+    background-color: #B2D2A433 !important;
+  }
 }

@@ -20,6 +20,7 @@ export * from './lib/context-menu/models/generic.action';
 export * from './lib/infinity-scrooler/infinity-scrooler.module';
 export * from './lib/nav-bar/interfaces/menu-item';
 export * from './lib/nav-bar/nav-bar.module';
+export * from './lib/table/table.module';
 
 
 

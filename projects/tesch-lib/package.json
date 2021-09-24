@@ -1,6 +1,6 @@
 {
   "name": "@tesch/tesch-lib",
-  "version": "1.0.10-beta-7",
+  "version": "1.0.10-beta-8",
   "description": "personal lib",
   "author": "Diego Tesch Gramelich",
   "repository": {
@@ -11,15 +11,13 @@
   "peerDependencies": {
     "@angular/common": "^10.2.4",
     "@angular/core": "^10.2.4",
-    "@angular/cdk": "^10.2.4",
-    "@fortawesome/fontawesome-free": "^5.15.4",
-    "uuid": "^8.3.2"
+    "@angular/cdk": "^10.2.4"
   },
-  "whitelistedNonPeerDependencies": [
-    "angular",
-    "fontawesome",
-    "uuid"
-  ],
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.4",
+    "uuid": "^8.3.2",
+    "bootstrap": "^5.1.1"
+  },
   "keywords": [
     "angular",
     "javascript",

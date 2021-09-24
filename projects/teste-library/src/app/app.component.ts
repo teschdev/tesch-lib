@@ -13,6 +13,7 @@ interface FakeActor {
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
+
   fakeActor1: FakeActor = {
     id: uuid(),
     age: 21
@@ -268,7 +269,7 @@ export class AppComponent implements OnInit {
 
   constructor(private alertService: ThcAlertService, private menuService: ContextMenuService, private injector: Injector, private service: ServiceService) {}
 
-  ngOnInit(): void {
+  async ngOnInit() {
     this.context_menu = [
       this.menuService.createContextMenuItem(
         {
@@ -291,6 +292,7 @@ export class AppComponent implements OnInit {
         ['parametro_6', uuid()],
       ),
     ]
+    await this.startLoading({ page: 1});
   }
 
   async startLoading({ page }) {
